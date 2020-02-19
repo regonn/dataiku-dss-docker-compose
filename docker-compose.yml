@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  dss:
+    image: dataiku/dss:latest
+    volumes:
+      - dss-data:/home/dataiku/dss
+    ports:
+      - "10000:10000"
+
+volumes:
+  dss-data:
+    driver: local
